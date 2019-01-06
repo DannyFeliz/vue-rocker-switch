@@ -1,6 +1,6 @@
 {
   "name": "vue-rocker-switch",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A customisable rocker switch component for Vue.js",
   "main": "./dist/vue-rocker-switch.umd.min.js",
   "files": [
@@ -27,7 +27,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "bundle": "vue-cli-service build --target lib --name vue-rocker-switch ./src/components/RockerSwitch.vue",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "publish": "npm publish --access public"
   },
   "dependencies": {
     "vue": "^2.5.21"
