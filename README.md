@@ -23,7 +23,10 @@ A few motivating and useful examples of how your product can be used. Spice this
 </template>
 
 <script>
+// Import package
 import RockerSwitch from "vue-rocker-switch";
+// Import styles
+import "vue-rocker-switch/dist/vue-rocker-switch.css";
 
 export default {
   name: "App",
