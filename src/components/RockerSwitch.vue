@@ -99,9 +99,11 @@ export default {
   },
   watch: {
     value(isOn) {
-      if (!this.isDisabled && this.isChecked != isOn) {
+      if (!this.isDisabled) {
+        if (this.isChecked != isOn) {
+          this.$emit("change", isOn);
+        }
         this.isChecked = isOn;
-        this.$emit("change", this.isChecked);
       }
     }
   },
@@ -115,7 +117,7 @@ export default {
       root.style.setProperty("--activeColorLabel", this.activeColorLabel);
       root.style.setProperty("--inactiveColorLabel", this.inactiveColorLabel);
     },
-    changeState(value, event) {
+    changeState(value, event = {}) {
       if (this.isDisabled) {
         event.preventDefault();
         return;
