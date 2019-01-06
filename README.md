@@ -13,9 +13,11 @@
 npm install vue-rocker-switch --save
 ```
 
-## Usage example
+# Demo
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+[![Edit Vue Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/x1pj1130o)
+
+## Usage example
 
 ```vue
 <template>
@@ -39,18 +41,18 @@ export default {
 
 ## Props
 
-| Prop               | Description                                                                                | Default value                                                      | Type             |
-| ------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ | ---------------- |
-| value              | Initial value                                                                              | `false`                                                            | Boolean          |
-| size               | rocker switch size, it can be a string (`small`, `medium` and `large`) or a decimal number | `small`                                                            | String or Number |
-| labelOn            | Text of the `On` label                                                                     | `On`                                                               | String or Number |
-| labelOff           | Text of the `Off` label                                                                    | `Off`                                                              | String or Number |
-| activeColorLabel   | Text color used when the `On` label is active                                              | ![#fff](https://placehold.it/15/fff/000000?text=+) `#fff`          | String           |
-| inactiveColorLabel | Text color used when the `Off` label is inactive                                           | ![#333](https://placehold.it/15/333/000000?text=+) `#333`          | String           |
-| backgroundColorOn  | Background color of the `On` button                                                        | ![#0084d0](https://placehold.it/15/0084d0/000000?text=+) `#0084d0` | String           |
-| backgroundColorOff | Background color of the `Off` button                                                       | ![#bd5757](https://placehold.it/15/bd5757/000000?text=+) `#bd5757` | String           |
-| borderColor        | Border color of the rocker switch                                                          | ![#eee](https://placehold.it/15/eee/000000?text=+) `#eee`          | String           |
-| toggle             | Allow to the rocker switch to behave as a toggle switch                                    | `true`                                                             | Boolean          |
+| Prop               | Description                                                                                             | Default value                                                      | Type             |
+| ------------------ | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------- |
+| value              | Boolean value attached to the rocker switcher. This will be used to initialize the component value too. | `false`                                                            | Boolean          |
+| size               | rocker switch size, it can be a string (`small`, `medium` and `large`) or a decimal number              | `small`                                                            | String or Number |
+| labelOn            | Text of the `On` label                                                                                  | `On`                                                               | String or Number |
+| labelOff           | Text of the `Off` label                                                                                 | `Off`                                                              | String or Number |
+| activeColorLabel   | Text color used when the `On` label is active                                                           | ![#fff](https://placehold.it/15/fff/000000?text=+) `#fff`          | String           |
+| inactiveColorLabel | Text color used when the `Off` label is inactive                                                        | ![#333](https://placehold.it/15/333/000000?text=+) `#333`          | String           |
+| backgroundColorOn  | Background color of the `On` button                                                                     | ![#0084d0](https://placehold.it/15/0084d0/000000?text=+) `#0084d0` | String           |
+| backgroundColorOff | Background color of the `Off` button                                                                    | ![#bd5757](https://placehold.it/15/bd5757/000000?text=+) `#bd5757` | String           |
+| borderColor        | Border color of the rocker switch                                                                       | ![#eee](https://placehold.it/15/eee/000000?text=+) `#eee`          | String           |
+| toggle             | Allow to the rocker switch to behave as a toggle switch                                                 | `true`                                                             | Boolean          |
 
 ## Events
 
@@ -70,8 +72,6 @@ export default {
 </table>
 
 ## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
 
 ```
 
@@ -122,7 +122,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 - This project was inspired by this post from codepen.io [Checkbox Toggle Switches Are Confusing UI](https://codepen.io/marcusconnor/post/checkbox-toggle-switches-are-confusing-ui) by [@MarcusConnorNH](https://twitter.com/MarcusConnorNH)
-
-```
-
-```
