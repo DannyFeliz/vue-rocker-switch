@@ -1,10 +1,32 @@
 {
   "name": "vue-rocker-switch",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.1",
+  "description": "A customisable rocker switch component for Vue.js",
+  "main": "./dist/vue-rocker-switch.umd.min.js",
+  "files": [
+    "dist/vue-rocker-switch.umd.min.js",
+    "dist/vue-rocker-switch.css"
+  ],
+  "keywords": [
+    "vue",
+    "rocker",
+    "switch",
+    "vue-rocker",
+    "vue-rocker-switch",
+    "light-rocker-switch",
+    "light-switcher"
+  ],
+  "author": "Danny Feliz <dannyfeliz08@gmail.com>",
+  "license": "MIT",
+  "bugs": "https://github.com/DannyFeliz/vue-rocker-switch/issues/new",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DannyFeliz/vue-rocker-switch"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "bundle": "vue-cli-service build --target lib --name vue-rocker-switch ./src/components/RockerSwitch.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

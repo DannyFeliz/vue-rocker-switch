@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <RocketSwitch @change="isOn => currenValue = isOn"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import RocketSwitch from "./components/RockerSwitch.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    RocketSwitch
+  },
+  data() {
+    return {
+      currenValue: false
+    };
   }
-}
+};
 </script>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style>
+#app div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 100px;
 }
 </style>
