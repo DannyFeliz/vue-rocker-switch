@@ -26,7 +26,7 @@ A few motivating and useful examples of how your product can be used. Spice this
 |labelOff|Text of the `Off` label|Off|String or Number|
 |activeColorLabel|Text color used when the `On` label is active|![#fff](https://placehold.it/15/fff/000000?text=+) `#fff`|String|
 |inactiveColorLabel|Text color used when the `Off` label is inactive|![#333](https://placehold.it/15/333/000000?text=+) `#333`|String|
-|backgroundColorOn|Background color of the `On` button|![#0084d0](https://placehold.it/15/0084d0/000000?text=+)|String|
+|backgroundColorOn|Background color of the `On` button|![#0084d0](https://placehold.it/15/0084d0/000000?text=+) `#0084d0`|String|
 |backgroundColorOff|Background color of the `Off` button|![#bd5757](https://placehold.it/15/bd5757/000000?text=+) `#bd5757`|String|
 |borderColor|Border color of the rocker switch|![#eee](https://placehold.it/15/eee/000000?text=+) `#eee`|String|
 |toggle|Allow to the rocker switch to behave as a toggle switch|`true`|Boolean|
