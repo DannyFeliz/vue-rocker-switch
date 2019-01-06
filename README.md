@@ -59,8 +59,6 @@ Danny Feliz – [@dannyfeliz08](https://twitter.com/dannyfeliz08) – dannyfeliz
 
 Distributed under the MIT license. See `LICENSE` for more information.
 
-[https://github.com/dannyfeliz](https://github.com/dannyfeliz/)
-
 ## Contributing
 
 1. Fork it (<https://github.com/dannyfeliz/vue-rocker-switch/fork>)
@@ -68,13 +66,3 @@ Distributed under the MIT license. See `LICENSE` for more information.
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
-
-<!-- Markdown link & img dfn's -->
-
-[npm-image]: https://img.shields.io/npm/v/vue-rocker-switch.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/vue-rocker-switch
-[npm-downloads]: https://img.shields.io/npm/dm/vue-rocker-switch.svg?style=flat-square
-
-# vue-rocker-switch
-
-## Project setup
