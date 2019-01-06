@@ -18,7 +18,7 @@ npm install vue-rocker-switch --save
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
 ## Props
-|Prop|Description|Default|Type|
+|Prop|Description|Default value|Type|
 |--- |--- |--- |--- |
 |value|Initial value|`false`|Boolean|
 |size|rocker switch size, it can be a string (small, medium and large) or a decimal number|small|String or Number|
