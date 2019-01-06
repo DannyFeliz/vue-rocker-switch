@@ -97,6 +97,14 @@ export default {
   mounted() {
     this.setUpColors();
   },
+  watch: {
+    value(isOn) {
+      if (!this.isDisabled && this.isChecked != isOn) {
+        this.isChecked = isOn;
+        this.$emit("change", this.isChecked);
+      }
+    }
+  },
   methods: {
     setUpColors() {
       const root = document.documentElement;
