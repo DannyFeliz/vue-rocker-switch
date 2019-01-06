@@ -1,6 +1,6 @@
 {
   "name": "vue-rocker-switch",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A customisable rocker switch component for Vue.js",
   "main": "./dist/vue-rocker-switch.umd.min.js",
   "files": [
