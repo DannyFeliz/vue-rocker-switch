@@ -17,9 +17,9 @@ npm install vue-rocker-switch --save
 
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
-```js
+```vue
 <template>
-    <RockerSwitch />
+  <RockerSwitch />
 </template>
 
 <script>
@@ -28,9 +28,9 @@ import RockerSwitch from "vue-rocker-switch";
 export default {
   name: "App",
   components: {
-      RockerSwitch
+    RockerSwitch
   }
-}
+};
 </script>
 ```
 
