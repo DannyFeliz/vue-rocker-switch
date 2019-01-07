@@ -15,7 +15,7 @@ npm install vue-rocker-switch --save
 
 # Demo
 
-[![Edit Vue Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/x1pj1130o)
+[![Edit vue-rocker-switch demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/qvw4o1k24)
 
 ## Usage example
 
