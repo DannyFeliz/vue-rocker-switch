@@ -1,11 +1,19 @@
 <template>
   <div class="rocker-switch-container">
     <label class="rocker" :style="this.rockerSize">
-      <input type="checkbox" v-model="isChecked" ref="switch" v-bind="$attrs">
-      <span class="switch-left" @click="changeState(true, $event)">
+      <input
+        type="checkbox"
+        v-model="isChecked"
+        ref="switch"
+        v-bind="$attrs">
+      <span
+        class="switch-left"
+        @click="changeState(true, $event)">
         <span>{{ labelOn }}</span>
       </span>
-      <span class="switch-right" @click="changeState(false, $event)">
+      <span
+        class="switch-right"
+        @click="changeState(false, $event)">
         <span>{{ labelOff }}</span>
       </span>
     </label>
@@ -109,7 +117,7 @@ export default {
   },
   methods: {
     setUpColors() {
-      const root = document.documentElement;
+      const root = this.$el;
 
       root.style.setProperty("--onColor", this.backgroundColorOn);
       root.style.setProperty("--offColor", this.backgroundColorOff);
@@ -139,15 +147,13 @@ export default {
 </script>
 
 <style>
-:root {
+.rocker-switch-container {
+  display: inline-block;
   --onColor: #0084d0;
   --offColor: #bd5757;
   --borderColor: #eee;
   --activeColorLabel: #fff;
   --inactiveColorLabel: #333;
-}
-.rocker-switch-container {
-  display: inline-block;
 }
 .rocker-switch-container .mid {
   display: flex;
