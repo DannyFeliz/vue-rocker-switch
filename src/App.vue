@@ -1,20 +1,30 @@
 <template>
   <div id="app">
-    <RocketSwitch @change="isOn => currenValue = isOn"/>
+    <Lightbulb :isOn="currentValue" />
+
+    <RockerSwitch @change="isOn => currentValue = isOn" />
+    <RockerSwitch
+      :size="1.2"
+      background-color-on="green"
+      activeColorLabel="yellow"
+      @change="isOn => currentValue = isOn"
+    />
   </div>
 </template>
 
 <script>
-import RocketSwitch from "./components/RockerSwitch.vue";
+import Lightbulb from "./components/Lightbulb";
+import RockerSwitch from "./components/RockerSwitch";
 
 export default {
   name: "app",
   components: {
-    RocketSwitch
+    RockerSwitch,
+    Lightbulb
   },
   data() {
     return {
-      currenValue: false
+      currentValue: false
     };
   }
 };
@@ -25,7 +35,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin-top: 100px;
+  margin-top: 30px;
 }
 </style>
