@@ -1,6 +1,6 @@
 <template>
   <div class="rocker-switch-container">
-    <label class="rocker" :style="this.rockerSize">
+    <label class="rocker" :style="this.rockerSize" @click.prevent="">
       <input
         type="checkbox"
         v-model="isChecked"
@@ -106,13 +106,13 @@ export default {
     this.setUpColors();
   },
   watch: {
-    value(isOn) {
-      if (!this.isDisabled) {
-        if (this.isChecked != isOn) {
-          this.$emit("change", isOn);
-        }
-        this.isChecked = isOn;
+    value(currentValue, oldValue) {
+      if (!this.isDisabled && currentValue != oldValue) {
+          this.isChecked = currentValue;
       }
+    },
+    isChecked(isOn) {
+        this.$emit("change", isOn);
     }
   },
   methods: {
@@ -131,15 +131,13 @@ export default {
         return;
       }
 
-      if (!this.toggle) {
+      if (this.toggle) {
+        this.isChecked = !this.isChecked;
+      } else {
         if (this.$refs.switch.checked != value) {
           this.isChecked = value;
-          this.$emit("change", value);
         }
         event.preventDefault();
-        return;
-      } else {
-        this.$emit("change", !this.isChecked);
       }
     }
   }
