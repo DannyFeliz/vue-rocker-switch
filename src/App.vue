@@ -1,14 +1,30 @@
 <template>
   <div id="app">
-    <Lightbulb :isOn="currentValue" />
-
-    <RockerSwitch @change="isOn => currentValue = isOn" />
+    <Lightbulb :isOn="currentValue" class="pointer"/>
+    <div>
+        <code>{{ currentValue }}</code>
+    </div>
+    <RockerSwitch
+      labelOn="Yes"
+      labelOff="No"
+      activeColorLabel="chartreuse"
+      inactiveColorLabel="darkred"
+      backgroundColorOn="fuchsia"
+      backgroundColorOff="#8389f8"
+      borderColor="orange"
+      size="medium"
+      :value="currentValue"
+      :toggle="false"
+      @change="isOn => currentValue = isOn"
+    />
     <RockerSwitch
       :size="1.2"
+      :value="currentValue"
       background-color-on="green"
       activeColorLabel="yellow"
       @change="isOn => currentValue = isOn"
     />
+
   </div>
 </template>
 
@@ -36,5 +52,8 @@ export default {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+}
+.pointer {
+    cursor: pointer;
 }
 </style>
