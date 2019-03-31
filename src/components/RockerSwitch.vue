@@ -21,6 +21,8 @@
 </template>
 
 <script>
+import { isColorValid }  from '../utils/helpers';
+
 export default {
   name: "RockerSwitch",
   props: {
@@ -49,23 +51,28 @@ export default {
     },
     activeColorLabel: {
       type: String,
-      default: "#fff"
+      default: "#fff",
+      validator: isColorValid,
     },
     inactiveColorLabel: {
       type: String,
-      default: "#333"
+      default: "#333",
+      validator: isColorValid,
     },
     backgroundColorOn: {
       type: String,
-      default: "#0084d0;"
+      default: "#0084d0",
+      validator: isColorValid,
     },
     backgroundColorOff: {
       type: String,
-      default: "#bd5757;"
+      default: "#bd5757",
+      validator: isColorValid,
     },
     borderColor: {
       type: String,
-      default: "#eee"
+      default: "#eee",
+      validator: isColorValid,
     },
     toggle: {
       type: Boolean,

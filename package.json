@@ -31,6 +31,7 @@
     "publish": "npm publish --access public"
   },
   "dependencies": {
+    "color-string": "^1.5.3",
     "vue": "^2.5.21"
   },
   "devDependencies": {
