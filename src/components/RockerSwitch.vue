@@ -21,73 +21,63 @@
 </template>
 
 <script>
-import colorString from 'color-string';
-
-export const isColorValid = (color) => {
-  const isValid = !!colorString.get(color);
-
-  if (!isValid) {
-    console.warn(`The color ${color} it's not a valid color, please check your input.`);
-  }
-
-  return isValid;
-};
+import { isColorValid } from '../utils/helpers';
 
 export default {
-  name: "RockerSwitch",
+  name: 'RockerSwitch',
   props: {
     value: {
       type: Boolean,
-      default: false
+      default: false,
     },
     size: {
       type: [String, Number],
-      default: "small",
+      default: 'small',
       validator(size) {
         return (
-          ["small", "medium", "large"].includes(
+          ['small', 'medium', 'large'].includes(
             size.toString().toLowerCase()
-          ) || typeof size === "number"
+          ) || typeof size === 'number'
         );
-      }
+      },
     },
     labelOn: {
       type: [String, Number],
-      default: "On"
+      default: 'On',
     },
     labelOff: {
       type: [String, Number],
-      default: "Off"
+      default: 'Off',
     },
     activeColorLabel: {
       type: String,
-      default: "#fff",
+      default: '#fff',
       validator: isColorValid,
     },
     inactiveColorLabel: {
       type: String,
-      default: "#333",
+      default: '#333',
       validator: isColorValid,
     },
     backgroundColorOn: {
       type: String,
-      default: "#0084d0",
+      default: '#0084d0',
       validator: isColorValid,
     },
     backgroundColorOff: {
       type: String,
-      default: "#bd5757",
+      default: '#bd5757',
       validator: isColorValid,
     },
     borderColor: {
       type: String,
-      default: "#eee",
+      default: '#eee',
       validator: isColorValid,
     },
     toggle: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   data() {
     return {
@@ -95,8 +85,8 @@ export default {
       sizes: {
         small: 0.5,
         medium: 0.8,
-        large: 0.9
-      }
+        large: 0.9,
+      },
     };
   },
   computed: {
@@ -106,18 +96,18 @@ export default {
     rockerSize() {
       return {
         fontSize:
-          (typeof this.size === "number" ? this.size : this.sizes[this.size]) +
-          "em"
+          (typeof this.size === 'number' ? this.size : this.sizes[this.size]) +
+          'em',
       };
     },
     isDisabled() {
       return (
         !!(
-          !!this.$attrs.hasOwnProperty("disabled") &&
-          this.$attrs.disabled === ""
+          !!this.$attrs.hasOwnProperty('disabled') &&
+          this.$attrs.disabled === ''
         ) || this.$attrs.disabled === true
       );
-    }
+    },
   },
   mounted() {
     this.setUpColors();
@@ -129,18 +119,18 @@ export default {
       }
     },
     isChecked(isOn) {
-        this.$emit("change", isOn);
-    }
+        this.$emit('change', isOn);
+    },
   },
   methods: {
     setUpColors() {
       const root = this.$el;
 
-      root.style.setProperty("--onColor", this.backgroundColorOn);
-      root.style.setProperty("--offColor", this.backgroundColorOff);
-      root.style.setProperty("--borderColor", this.borderColor);
-      root.style.setProperty("--activeColorLabel", this.activeColorLabel);
-      root.style.setProperty("--inactiveColorLabel", this.inactiveColorLabel);
+      root.style.setProperty('--onColor', this.backgroundColorOn);
+      root.style.setProperty('--offColor', this.backgroundColorOff);
+      root.style.setProperty('--borderColor', this.borderColor);
+      root.style.setProperty('--activeColorLabel', this.activeColorLabel);
+      root.style.setProperty('--inactiveColorLabel', this.inactiveColorLabel);
     },
     changeState(value, event = {}) {
       if (this.isDisabled) {
@@ -156,8 +146,8 @@ export default {
         }
         event.preventDefault();
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
