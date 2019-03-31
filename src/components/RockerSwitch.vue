@@ -21,6 +21,18 @@
 </template>
 
 <script>
+import colorString from 'color-string';
+
+export const isColorValid = (color) => {
+  const isValid = !!colorString.get(color);
+
+  if (!isValid) {
+    console.warn(`The color ${color} it's not a valid color, please check your input.`);
+  }
+
+  return isValid;
+};
+
 export default {
   name: "RockerSwitch",
   props: {
@@ -49,23 +61,28 @@ export default {
     },
     activeColorLabel: {
       type: String,
-      default: "#fff"
+      default: "#fff",
+      validator: isColorValid,
     },
     inactiveColorLabel: {
       type: String,
-      default: "#333"
+      default: "#333",
+      validator: isColorValid,
     },
     backgroundColorOn: {
       type: String,
-      default: "#0084d0;"
+      default: "#0084d0",
+      validator: isColorValid,
     },
     backgroundColorOff: {
       type: String,
-      default: "#bd5757;"
+      default: "#bd5757",
+      validator: isColorValid,
     },
     borderColor: {
       type: String,
-      default: "#eee"
+      default: "#eee",
+      validator: isColorValid,
     },
     toggle: {
       type: Boolean,
